@@ -23,7 +23,7 @@ public class Animation : MonoBehaviour {
         if(Input.GetKey("left")){
             transform.Rotate(0, -5, 0);
         }
-        if(Input.GetKey("z")){
+        if(Input.GetKey(KeyCode.Space)){
             animator.SetBool("Attack1Trigger", true);
         }
 	}
