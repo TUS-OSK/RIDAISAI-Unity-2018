@@ -11,8 +11,8 @@ public class Animation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey("up")) {
-            transform.position += transform.forward * 0.01f;
+        if (Input.GetKey(KeyCode.UpArrow)) {
+            transform.position += transform.forward * 1f * Time.deltaTime;
             animator.SetBool("Moving", true);
         }else{
             animator.SetBool("Moving", false);
@@ -23,8 +23,8 @@ public class Animation : MonoBehaviour {
         if(Input.GetKey("left")){
             transform.Rotate(0, -5, 0);
         }
-        if(Input.GetKey("down")){
-            this.transform.Translate(Vector3.back * 0.2f);
+        if(Input.GetKey(KeyCode.DownArrow)){
+            transform.position += transform.forward * -10f * Time.deltaTime;
             animator.SetBool("walk", true);
         }else{
             animator.SetBool("walk", false);
