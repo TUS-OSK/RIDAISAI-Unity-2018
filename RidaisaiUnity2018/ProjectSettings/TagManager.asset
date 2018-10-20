@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shootable
   - ken
+  - Eken
   layers:
   - Default
   - TransparentFX
