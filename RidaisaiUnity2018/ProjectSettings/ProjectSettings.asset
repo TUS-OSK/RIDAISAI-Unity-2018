@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 00000000000000000000000000000000
+  productGUID: 472a26d73625949f89ec94235398c82d
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -726,7 +726,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
   cloudProjectId: f90384f0-29fc-4eb8-ba2c-11290a441662
-  projectName: EffectsExamples
+  projectName: RIDAISAI-Unity-2018
   organizationId: lil0320
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

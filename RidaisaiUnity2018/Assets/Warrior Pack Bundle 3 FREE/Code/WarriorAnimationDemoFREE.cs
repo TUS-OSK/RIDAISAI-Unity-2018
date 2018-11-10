@@ -4,7 +4,7 @@ using System.Collections;
 public class WarriorAnimationDemoFREE : MonoBehaviour 
 {
 	public Animator animator;
-	float rotationSpeed = 30;
+	float rotationSpeed = 10;
 	Vector3 inputVec;
 	Vector3 targetDirection;
 	
