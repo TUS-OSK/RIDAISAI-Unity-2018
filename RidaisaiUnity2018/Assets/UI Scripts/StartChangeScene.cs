@@ -1,19 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class StartChangeScene : MonoBehaviour {
+    
+    Slider _slider;
+    float hp = 0;
+    public GameObject Slider;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
         if(Input.GetKey(KeyCode.Return)){
-            SceneManager.LoadScene("Test");
+            Debug.Log("Enter入力");
+            Slider.SetActive(true);
+            StartCoroutine("WaitScene");
         }
 	}
+
+    IEnumerator WaitScene()
+    {
+        _slider = GameObject.Find("Slider").GetComponent<Slider>();
+
+        while (hp < 1)
+        {
+            hp += 0.01f;
+            _slider.value = hp;
+            yield return new WaitForSeconds(0.01f);
+        }
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("Test");
+        yield return null;
+    }
 }

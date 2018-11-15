@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: UIAtlas_0
     21300002: UIAtlas_1
+    21300004: UIAtlas_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -132,6 +133,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e0468b7843c17456f8d3dcb77e9dc992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 238
+        width: 19
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe68ebddc96548ee8b95ec0783594b9
       vertices: []
       indices: 
       edges: []
