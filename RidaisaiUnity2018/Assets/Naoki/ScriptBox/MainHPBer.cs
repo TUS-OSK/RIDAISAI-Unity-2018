@@ -8,6 +8,8 @@ public class MainHPBer : MonoBehaviour
 
     private Slider mainslider;
     public float mainHP;
+    public AudioManeger gameover;
+    public AudioManeger bgm;
     //EnemyHP script;
     //GameObject enemy;
     // Use this for initialization
@@ -32,6 +34,8 @@ public class MainHPBer : MonoBehaviour
         mainslider.value = mainHP;
         if (mainHP == 0)
         {
+            gameover.PlaySE3();
+            bgm.StopBGM();
             Destroy(this.gameObject);
         }
     }

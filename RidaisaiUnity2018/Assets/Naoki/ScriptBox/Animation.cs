@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Animation : MonoBehaviour {
     private Animator animator;
+    public AudioManeger se;
+    public float StartTime;
+    public float musicSpan;
+    private int n;
+
 	// Use this for initialization
 	void Start () {
         animator = GetComponent<Animator>();
@@ -31,6 +36,17 @@ public class Animation : MonoBehaviour {
         }
         if(Input.GetKey(KeyCode.Space)){
             animator.SetBool("Attack1Trigger", true);
+            StartCoroutine(music());
+            n += 1;
         }
-	}
+    }
+    private IEnumerator music(){
+        if(Input.GetKey(KeyCode.Space) && n ==1){
+            Debug.Log("攻撃した");
+            yield return new WaitForSeconds(musicSpan);
+            se.PlaySE();
+            yield return new WaitForSeconds(StartTime);
+            n = 0;
+        }
+    }
 }
