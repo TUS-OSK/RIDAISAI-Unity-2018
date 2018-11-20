@@ -35,9 +35,12 @@ public class EnemyHP : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-	private void OnCollisionEnter(Collision collision)
+	private void OnCollisionEnter(Collision other)
 	{
-        mainhp.Attacked();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            mainhp.Attacked();
+        }
 	}
  
          /*      if (other.gameObject.CompareTag("ken"))

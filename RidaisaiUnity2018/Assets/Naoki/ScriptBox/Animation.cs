@@ -29,7 +29,7 @@ public class Animation : MonoBehaviour {
             transform.Rotate(0, -5, 0);
         }
         if(Input.GetKey(KeyCode.DownArrow)){
-            transform.position += transform.forward * -10f * Time.deltaTime;
+            transform.position += transform.forward * -1.5f * Time.deltaTime;
             animator.SetBool("walk", true);
         }else{
             animator.SetBool("walk", false);
