@@ -12,13 +12,13 @@ public class StartBottun : MonoBehaviour
     public void OnClick()
     {
         Debug.Log("ボタン入力");
-        Slider.SetActive(true);
         StartCoroutine("WaitScene");
-        // SceneManager.LoadScene("Test");
         }
 
     IEnumerator WaitScene() 
     {
+        yield return new WaitForSeconds(1.0f);
+        Slider.SetActive(true);
         _slider = GameObject.Find("Slider").GetComponent<Slider>();
 
         while (hp < 1) {

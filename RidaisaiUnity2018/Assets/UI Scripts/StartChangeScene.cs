@@ -14,18 +14,20 @@ public class StartChangeScene : MonoBehaviour {
 	void Update () {
         if(Input.GetKey(KeyCode.Return)){
             Debug.Log("Enter入力");
-            Slider.SetActive(true);
+
             StartCoroutine("WaitScene");
         }
 	}
 
     IEnumerator WaitScene()
     {
+        yield return new WaitForSeconds(1.0f);
+        Slider.SetActive(true);
         _slider = GameObject.Find("Slider").GetComponent<Slider>();
 
         while (hp < 1)
         {
-            hp += 0.01f;
+            hp += 0.005f;
             _slider.value = hp;
             yield return new WaitForSeconds(0.01f);
         }
