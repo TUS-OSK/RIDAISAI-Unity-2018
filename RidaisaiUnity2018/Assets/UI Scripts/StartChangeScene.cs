@@ -32,7 +32,7 @@ public class StartChangeScene : MonoBehaviour {
             yield return new WaitForSeconds(0.01f);
         }
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadScene("Stage3");
         yield return null;
     }
 }

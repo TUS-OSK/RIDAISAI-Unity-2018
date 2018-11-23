@@ -35,8 +35,8 @@ public class GoblinController : MonoBehaviour
 
             animator.SetBool("walk", true);
             transform.rotation = Quaternion.Slerp(transform.rotation,
-                                                  Quaternion.LookRotation(target.position - transform.position), 1f * Time.deltaTime);
-            transform.position += transform.forward * 1.5f * Time.deltaTime;
+                                                  Quaternion.LookRotation(target.position - transform.position), 4f * Time.deltaTime);
+            transform.position += transform.forward * 0.2f * Time.deltaTime;
 
         }
     }

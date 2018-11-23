@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainHPBer : MonoBehaviour
 {
+    public GameObject GoalUI;
+    public GameObject ThankUI;
 
     private Slider mainslider;
     public float mainHP;
@@ -25,7 +28,14 @@ public class MainHPBer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKey(KeyCode.Y))
+        {
+            SceneManager.LoadScene("Stage3");
+        }
+        else if (Input.GetKey(KeyCode.N))
+        {
+            StartCoroutine("Thank");
+        }
     }
 
     public void Attacked()
@@ -58,5 +68,17 @@ public class MainHPBer : MonoBehaviour
 
             //script.attack();
         }
+        if(other.gameObject.CompareTag("Plyer")){
+            GoalUI.SetActive(true);
+        }
+       
+    }
+
+    IEnumerator Thank()
+    {
+        ThankUI.SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("Start");
+        yield return null;
     }
 }

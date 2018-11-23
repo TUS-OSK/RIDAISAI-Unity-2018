@@ -313,7 +313,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1914,6 +1914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b29186227c3a4568b5cdc5b75926fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GoalUI: {fileID: 0}
+  ThankUI: {fileID: 0}
   mainHP: 6
   gameover: {fileID: 1710196624}
   bgm: {fileID: 1710196624}
@@ -3646,6 +3648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHP: 5
+  goblincon: {fileID: 0}
   se4: {fileID: 1710196624}
 --- !u!1 &880624619
 GameObject:
@@ -4033,7 +4036,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5378,6 +5381,7 @@ MonoBehaviour:
   gameclear: {fileID: 781279022}
   gameover: {fileID: 2082830097}
   se4: {fileID: 1813521296}
+  titlebgm: {fileID: 0}
 --- !u!4 &1710196625
 Transform:
   m_ObjectHideFlags: 0
