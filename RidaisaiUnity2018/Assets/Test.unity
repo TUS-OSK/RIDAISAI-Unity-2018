@@ -289,12 +289,12 @@ Prefab:
     - target: {fileID: 224174666827561154, guid: df99ce6448272424e86f7be2f98b510d,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224174666827561154, guid: df99ce6448272424e86f7be2f98b510d,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df99ce6448272424e86f7be2f98b510d, type: 2}
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 148456dd743ed47c3ad2e48d3edb94fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapSize: 7
+  mapSize: 9
   wallObject: {fileID: 1912898114742580, guid: a1f23a98275e64dca9be9bb04092d37b, type: 2}
   groundObject: {fileID: 1184867871738970, guid: aa14f194b41124b6e9f06975bd3b159a,
     type: 2}
@@ -471,6 +471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainChar: {fileID: 1864533899733444, guid: b841dc31d5fdc484bac9007787e7be5b, type: 2}
+  enemyChar: {fileID: 1809272446626594, guid: 723ea9cd2e8e247f4842688db07fbc75, type: 2}
 --- !u!4 &1881193202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4585417150686856, guid: 303f3dbd6016645079a0e0ecd1bf3887,

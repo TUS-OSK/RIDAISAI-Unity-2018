@@ -5,7 +5,7 @@ using UnityEngine;
 public class SearchCaracter : MonoBehaviour {
 
 
-    private void OnTriggerStay(Collision col)
+    private void OnTriggerStay(Collider col)
     {
         if(col.gameObject.CompareTag("Player")){
             MoveEnemy.EnemyState state = GetComponentInParent<MoveEnemy>().GetState();

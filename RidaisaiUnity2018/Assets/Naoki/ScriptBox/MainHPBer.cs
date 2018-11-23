@@ -42,17 +42,21 @@ public class MainHPBer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        /*      if (other.gameObject.CompareTag("Eken")) {
-                mainHP = mainHP - 1;
-              Debug.Log(other.name);
-            mainslider.value = mainHP;
-          if(mainHP == 0){
-            Destroy(this.gameObject);
-         }
-        }*/
-        other.gameObject.GetComponent<EnemyHP>().attack();
-        //other.gameObjectで全てのもの,その後に関数を獲得して、獲得した後に持って来たい関数を書く
+        if (other.gameObject.CompareTag("Eken"))
+        {
+            /*      if (other.gameObject.CompareTag("Eken")) {
+                    mainHP = mainHP - 1;
+                  Debug.Log(other.name);
+                mainslider.value = mainHP;
+              if(mainHP == 0){
+                Destroy(this.gameObject);
+             }
+            }*/
+            Debug.Log(this.transform.name + " to " + other.transform.name);
+            other.gameObject.GetComponent<EnemyHP>().attack();
+            //other.gameObjectで全てのもの,その後に関数を獲得して、獲得した後に持って来たい関数を書く
 
-        //script.attack();
+            //script.attack();
+        }
     }
 }

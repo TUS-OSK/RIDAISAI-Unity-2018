@@ -11,13 +11,13 @@ public class GoblinController : MonoBehaviour
     public GameObject hani;
     public float kougeki;
     public float Attime;
-    public bool n;
+   // public bool n;
     // Use this for initialization
     void Start()
     {
         animator = GetComponent<Animator>();
         hani.SetActive(false);
-        n = true;
+     //   n = false;
     }
 
 
@@ -28,27 +28,36 @@ public class GoblinController : MonoBehaviour
         }
     private void OnTriggerStay(Collider other)
     {
-        if (n == true)
+        //if (n == true)
+        // {
+        if (other.gameObject.CompareTag("Player"))
+        {
+
+            animator.SetBool("walk", true);
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                                                  Quaternion.LookRotation(target.position - transform.position), 1f * Time.deltaTime);
+            transform.position += transform.forward * 1.5f * Time.deltaTime;
+
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.CompareTag("Player")){
+            animator.SetBool("walk", false);
+        }
+    }
+    public void OnCollisionEnter(Collision other)
+    {
+
         {
             if (other.gameObject.CompareTag("Player"))
             {
-
-                animator.SetBool("walk", true);
-                transform.rotation = Quaternion.Slerp(transform.rotation,
-                                                      Quaternion.LookRotation(target.position - transform.position), 1f * Time.deltaTime);
-                transform.position += transform.forward * 1.5f * Time.deltaTime;
-
+               // n = true;
+            //    if (n == true)
+               // {
+                    StartCoroutine(Atakkedspm());
+              //  }
             }
-            else
-            {
-                animator.SetBool("walk", false);
-            }
-        }
-    }
-    private void OnCollisionEnter(Collision other)
-    {
-        if(other.gameObject.CompareTag("Player")){
-            StartCoroutine(Atakkedspm());
         }
     }
     private IEnumerator Atakkedspm(){

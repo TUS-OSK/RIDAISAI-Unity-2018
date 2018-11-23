@@ -21,7 +21,7 @@ public class EnemyHP : MonoBehaviour
         slider.maxValue = enemyHP;
         slider.value = enemyHP;
         Player = GameObject.Find("2Handed Warrior");  //ここで変数に格納する
-        mainhp = Player.GetComponent<MainHPBer>();   //スクリプトを変数に格納する
+        //if(Player) mainhp = Player.GetComponent<MainHPBer>();   //スクリプトを変数に格納する
         goblincon = GetComponent<GoblinController>();
         }
 
@@ -39,17 +39,20 @@ public class EnemyHP : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    private void OnTriggerEnter(Collider other)
+   /* private void OnTriggerEnter(Collider other)
     {
-        if (goblincon.n == false)
         {
             // string layer = LayerMask.LayerToName(other.gameObject.layer);
-            if (other.gameObject.CompareTag("Player")/*layer == "Player"*/)
+            if (other.gameObject.CompareTag("Player")/*layer == "Player")
             {
+              //  goblincon.n = true;
+              //  if (goblincon.n == true)
+                //{
                 mainhp.Attacked();
+               // }
             }
-        }
-    }
+        }*/
+    //}
 
     /*      if (other.gameObject.CompareTag("ken"))
            {

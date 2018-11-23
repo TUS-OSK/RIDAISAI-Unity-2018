@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animation : MonoBehaviour {
+public class Anime : MonoBehaviour {
     private Animator animator;
     public AudioManeger se;
     public float StartTime;
