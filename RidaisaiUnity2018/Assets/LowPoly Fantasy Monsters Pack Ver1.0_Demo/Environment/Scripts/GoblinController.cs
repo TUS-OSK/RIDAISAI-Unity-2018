@@ -11,7 +11,7 @@ public class GoblinController : MonoBehaviour
     public GameObject hani;
     public float kougeki;
     public float Attime;
-    private bool n;
+    public bool n;
     // Use this for initialization
     void Start()
     {
@@ -28,20 +28,21 @@ public class GoblinController : MonoBehaviour
         }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (n == true)
         {
-            if (n == true)
+            if (other.gameObject.CompareTag("Player"))
             {
+
                 animator.SetBool("walk", true);
                 transform.rotation = Quaternion.Slerp(transform.rotation,
                                                       Quaternion.LookRotation(target.position - transform.position), 1f * Time.deltaTime);
                 transform.position += transform.forward * 1.5f * Time.deltaTime;
-                n = false;
-            }
 
-        }else{
-            animator.SetBool("walk", false);
-            n = true;
+            }
+            else
+            {
+                animator.SetBool("walk", false);
+            }
         }
     }
     private void OnCollisionEnter(Collision other)

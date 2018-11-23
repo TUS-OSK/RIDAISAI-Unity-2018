@@ -10,6 +10,7 @@ public class EnemyHP : MonoBehaviour
     private Slider slider;
     GameObject Player;  //ここで持って来たいスクリプトを持ってるオブジェクトを提示
     MainHPBer mainhp;  //持って来たいスクリプトを提示
+    public GoblinController goblincon;
 
 
         // Use this for initialization
@@ -20,6 +21,7 @@ public class EnemyHP : MonoBehaviour
         slider.value = enemyHP;
         Player = GameObject.Find("2Handed Warrior");  //ここで変数に格納する
         mainhp = Player.GetComponent<MainHPBer>();   //スクリプトを変数に格納する
+        goblincon = GetComponent<GoblinController>();
         }
 
         // Update is called once per frame
@@ -36,13 +38,16 @@ public class EnemyHP : MonoBehaviour
         }
     }
     private void OnTriggerEnter(Collider other)
-     {
-       // string layer = LayerMask.LayerToName(other.gameObject.layer);
-        if (other.gameObject.CompareTag("Player")/*layer == "Player"*/)
+    {
+        if (goblincon.n == false)
         {
-            mainhp.Attacked();
+            // string layer = LayerMask.LayerToName(other.gameObject.layer);
+            if (other.gameObject.CompareTag("Player")/*layer == "Player"*/)
+            {
+                mainhp.Attacked();
+            }
         }
-	}
+    }
 
     /*      if (other.gameObject.CompareTag("ken"))
            {
