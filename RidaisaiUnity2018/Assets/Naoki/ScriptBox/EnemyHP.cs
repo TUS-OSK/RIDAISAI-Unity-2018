@@ -11,6 +11,7 @@ public class EnemyHP : MonoBehaviour
     GameObject Player;  //ここで持って来たいスクリプトを持ってるオブジェクトを提示
     MainHPBer mainhp;  //持って来たいスクリプトを提示
     public GoblinController goblincon;
+    public AudioManeger se4;
 
 
         // Use this for initialization
@@ -34,6 +35,7 @@ public class EnemyHP : MonoBehaviour
         slider.value = enemyHP;
         if (enemyHP == 0)
         {
+            se4.PlaySE4();
             Destroy(this.gameObject);
         }
     }

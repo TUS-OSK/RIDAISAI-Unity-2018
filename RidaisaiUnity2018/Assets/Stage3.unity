@@ -1641,6 +1641,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224702781254611302, guid: 64645d38735bf42feaa5ff083baaaf92,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224702781254611302, guid: 64645d38735bf42feaa5ff083baaaf92,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54808963148833286, guid: 64645d38735bf42feaa5ff083baaaf92, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 64645d38735bf42feaa5ff083baaaf92, type: 2}
@@ -3354,6 +3364,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114875765974478404, guid: 7f8c830e3089e43cea48fe45260079f9,
+        type: 2}
+      propertyPath: se4
+      value: 
+      objectReference: {fileID: 1710196624}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f8c830e3089e43cea48fe45260079f9, type: 2}
   m_IsPrefabAsset: 0
@@ -3731,6 +3746,7 @@ MonoBehaviour:
   hani: {fileID: 520016264}
   kougeki: 0.4
   Attime: 0.3
+  n: 0
 --- !u!54 &1504676886
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4049,6 +4065,8 @@ MonoBehaviour:
   se: {fileID: 2140424522}
   gameclear: {fileID: 781279022}
   gameover: {fileID: 2082830097}
+  se4: {fileID: 0}
+  titlebgm: {fileID: 0}
 --- !u!4 &1710196625
 Transform:
   m_ObjectHideFlags: 0
@@ -4405,6 +4423,16 @@ Prefab:
     - target: {fileID: 224001291094154572, guid: 6acdb5232d16f4510b6e3af99e0ff397,
         type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224704697532098848, guid: 6acdb5232d16f4510b6e3af99e0ff397,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224704697532098848, guid: 6acdb5232d16f4510b6e3af99e0ff397,
+        type: 2}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

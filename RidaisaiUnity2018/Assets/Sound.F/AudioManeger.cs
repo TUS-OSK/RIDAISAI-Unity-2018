@@ -8,6 +8,8 @@ public class AudioManeger : MonoBehaviour
     public AudioSource se;
     public AudioSource gameclear;
     public AudioSource gameover;
+    public AudioSource se4;
+    public AudioSource titlebgm;
     // Use this for initialization
     public void PlayBGM()
     {
@@ -32,4 +34,18 @@ public class AudioManeger : MonoBehaviour
         gameover.PlayOneShot(gameover.clip);
         Debug.Log("GameOver");
     }
+    public void PlaySE4()
+    {
+        se4.PlayOneShot(se4.clip);
+        Debug.Log("やられた!!");
+    }
+    public void TitleBgmStart()
+    {
+        titlebgm.Play();
+    }
+    public void TitleBgmStop()
+    {
+        titlebgm.Stop();
+    }
+
 }
