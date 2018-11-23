@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainHP: 10
-  gameover: {fileID: 0}
+  gameover: {fileID: 114480857031514404, guid: 39649b3a780b74977b2b2192eb9a209f, type: 2}
   bgm: {fileID: 0}
 --- !u!136 &136131078274677672
 CapsuleCollider:

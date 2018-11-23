@@ -10,6 +10,7 @@ public class AudioManeger : MonoBehaviour
     public AudioSource gameover;
     public AudioSource se4;
     public AudioSource titlebgm;
+    
     // Use this for initialization
     public void PlayBGM()
     {
