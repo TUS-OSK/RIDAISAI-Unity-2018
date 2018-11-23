@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Move : MonoBehaviour {
 
-	private float move = 20;
+  /*  private float move = 20;
 	private bool stop = false;	
 	private float blend;
 	private float delay = 0;
@@ -16,15 +16,15 @@ public class Move : MonoBehaviour {
 	void Start () 
 	{
 
-	/*	if ( null != GetComponent<Animation>() )
+		if ( null != GetComponent<Animation>() )
 		{
 			hasAniComp = true;
 		}
 
-*/
+
 	}
 
-/*	void MoveActive ()
+	void MoveActive ()
 	{ 
 		float speed =0.0f;
 		float add =0.0f;
@@ -106,12 +106,12 @@ public class Move : MonoBehaviour {
 
 		return false;
 	}
-*/
+
 	// Update is called once per frame
 	void Update () 
 	{
 
-	/*	MoveActive();
+		MoveActive();
 
 		if ( hasAniComp == true )
 		{	
@@ -204,6 +204,6 @@ public class Move : MonoBehaviour {
 		{
 			transform.Rotate(0.0f,Time.deltaTime*100.0f,0.0f);
 		}
-*/
-	}
+
+	}*/
 }

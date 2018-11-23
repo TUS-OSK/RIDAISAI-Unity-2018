@@ -35,23 +35,24 @@ public class EnemyHP : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-	private void OnCollisionEnter(Collision other)
-	{
-        if (other.gameObject.CompareTag("Player"))
+    private void OnTriggerEnter(Collider other)
+     {
+       // string layer = LayerMask.LayerToName(other.gameObject.layer);
+        if (other.gameObject.CompareTag("Player")/*layer == "Player"*/)
         {
             mainhp.Attacked();
         }
 	}
- 
-         /*      if (other.gameObject.CompareTag("ken"))
-                {
-                    enemyHP = enemyHP - 1;
-                    slider.value = enemyHP;
-                    if (enemyHP == 0)
-                    {
-                        Destroy(this.gameObject);
-                    }
-                }*/
-          //スクリプトのなかに入っている関数を表示
-   
+
+    /*      if (other.gameObject.CompareTag("ken"))
+           {
+               enemyHP = enemyHP - 1;
+               slider.value = enemyHP;
+               if (enemyHP == 0)
+               {
+                   Destroy(this.gameObject);
+               }
+           }*/
+    //スクリプトのなかに入っている関数を表示
+
 }

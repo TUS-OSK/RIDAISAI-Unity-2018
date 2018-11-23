@@ -20,6 +20,14 @@ public class MoveEnemy : MonoBehaviour {
     };
 
 
+    /*public void CreateRandomPsition(){
+        var randDestination = Random.insideUnitSphere * 8;
+        SetDestination(randDestination);
+    }
+    public void SetDestination(Vector3 position){
+        destintion = position;
+    }*/
+
     // Use this for initialization
     void Start()
     {
@@ -27,6 +35,9 @@ public class MoveEnemy : MonoBehaviour {
         setPosition = GetComponent<UnityEngine.AI.NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
         enemycontroller = GetComponent<CharacterController>();
+        elapsedTime = 0;
+        SetState("wait");
+        arrived = false;
         }
 
     public void SetState(string mode, Transform obj = null)
@@ -62,7 +73,8 @@ public class MoveEnemy : MonoBehaviour {
                 setPosition.SetDestination(playerTransform.position);
             }
             if(enemycontroller.isGrounded){
-
+                animator.SetFloat("Speed", 2.0f);
+                
             }
         }
 	}

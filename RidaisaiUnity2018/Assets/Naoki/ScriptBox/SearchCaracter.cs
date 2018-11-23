@@ -5,7 +5,7 @@ using UnityEngine;
 public class SearchCaracter : MonoBehaviour {
 
 
-    private void OnCollisionStay(Collision col)
+    private void OnTriggerStay(Collision col)
     {
         if(col.gameObject.CompareTag("Player")){
             MoveEnemy.EnemyState state = GetComponentInParent<MoveEnemy>().GetState();
@@ -15,6 +15,12 @@ public class SearchCaracter : MonoBehaviour {
             }
         }
     }
+  /*  private void OnTriggerEnter(Collider col)
+    {
+        if(col.gameObject.CompareTag("Player")){
+            GetComponentInParent<MoveEnemy>().SetState("wait");
+        }
+    }*/
     // Use this for initialization
     void Start () {
 		
