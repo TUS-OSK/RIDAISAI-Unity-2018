@@ -17,7 +17,7 @@ public class EnemyHP : MonoBehaviour
         // Use this for initialization
         void Start()
         {
-        slider = GameObject.Find("HPSlider").GetComponent<Slider>();
+        slider = this.GetComponentInChildren<Slider>();
         slider.maxValue = enemyHP;
         slider.value = enemyHP;
         Player = GameObject.Find("2Handed Warrior");  //ここで変数に格納する

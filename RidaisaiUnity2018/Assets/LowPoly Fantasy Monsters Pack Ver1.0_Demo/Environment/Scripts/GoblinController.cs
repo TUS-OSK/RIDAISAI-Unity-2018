@@ -11,6 +11,7 @@ public class GoblinController : MonoBehaviour
     public GameObject hani;
     public float kougeki;
     public float Attime;
+    public float gobspeed;
    // public bool n;
     // Use this for initialization
     void Start()
@@ -36,7 +37,7 @@ public class GoblinController : MonoBehaviour
             animator.SetBool("walk", true);
             transform.rotation = Quaternion.Slerp(transform.rotation,
                                                   Quaternion.LookRotation(target.position - transform.position), 4f * Time.deltaTime);
-            transform.position += transform.forward * 0.2f * Time.deltaTime;
+            transform.position += transform.forward * gobspeed * Time.deltaTime;
 
         }
     }
@@ -46,16 +47,22 @@ public class GoblinController : MonoBehaviour
             animator.SetBool("walk", false);
         }
     }
+    private Coroutine attackC;
     public void OnCollisionEnter(Collision other)
     {
 
         {
             if (other.gameObject.CompareTag("Player"))
             {
-               // n = true;
-            //    if (n == true)
-               // {
-                    StartCoroutine(Atakkedspm());
+                // n = true;
+                //    if (n == true)
+                // {
+                if (attackC != null)
+                {
+                    StopCoroutine(attackC);
+                    attackC = null;
+                }
+                    attackC = StartCoroutine(Atakkedspm());
               //  }
             }
         }
