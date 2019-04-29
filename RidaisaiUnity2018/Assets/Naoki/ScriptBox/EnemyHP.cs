@@ -12,11 +12,14 @@ public class EnemyHP : MonoBehaviour
     MainHPBer mainhp;  //持って来たいスクリプトを提示
     public GoblinController goblincon;
     public AudioManeger se4;
+    public GameObject Zone;
+    private static int c;
 
 
         // Use this for initialization
         void Start()
         {
+        enemyHP = (c / 2) + +enemyHP;
         slider = this.GetComponentInChildren<Slider>();
         slider.maxValue = enemyHP;
         slider.value = enemyHP;
@@ -28,13 +31,18 @@ public class EnemyHP : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-
+        if(Input.GetKey(KeyCode.Y)){
+            c++;
+            enemyHP = enemyHP + c / 2;
+            }
         }
+        
     public void attack(){
         enemyHP = enemyHP - 1;
         slider.value = enemyHP;
         if (enemyHP == 0)
         {
+            Debug.Log("倒した");
             se4.PlaySE4();
             Destroy(this.gameObject);
         }

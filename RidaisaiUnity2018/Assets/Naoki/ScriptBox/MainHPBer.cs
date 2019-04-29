@@ -13,6 +13,7 @@ public class MainHPBer : MonoBehaviour
     public float mainHP;
     public AudioManeger gameover;
     public AudioManeger bgm;
+    public Camera camera;
     //EnemyHP script;
     //GameObject enemy;
     // Use this for initialization
@@ -21,6 +22,7 @@ public class MainHPBer : MonoBehaviour
         mainslider = GameObject.Find("HPBerMain").GetComponent<Slider>();
         mainslider.maxValue = mainHP;
         mainslider.value = mainHP;
+        camera = GameObject.Find("Camera").GetComponent<Camera>();
         //enemy = GameObject.Find("Enemy");
         //script = enemy.GetComponent<EnemyHP>();
     }

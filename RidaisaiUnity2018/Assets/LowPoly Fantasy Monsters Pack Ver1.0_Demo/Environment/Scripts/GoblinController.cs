@@ -12,12 +12,14 @@ public class GoblinController : MonoBehaviour
     public float kougeki;
     public float Attime;
     public float gobspeed;
+    public GameObject Zone;
    // public bool n;
     // Use this for initialization
     void Start()
     {
         animator = GetComponent<Animator>();
         hani.SetActive(false);
+ //       Zone.SetActive(false);
      //   n = false;
     }
 
@@ -38,7 +40,7 @@ public class GoblinController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation,
                                                   Quaternion.LookRotation(target.position - transform.position), 4f * Time.deltaTime);
             transform.position += transform.forward * gobspeed * Time.deltaTime;
-
+        //    Zone.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
